@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col items-center mb-6">
+            <div class="mb-4">
+                <a href="/"
+                    class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+                    Back to Add Item
+                </a>
+            </div>
+            <h2 class="text-4xl font-bold text-center">Item List</h2>
+        </div>
+
+        {% if items %}
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for item in items %}
+            <li class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-300">
+                <article class="flex flex-col items-center">
+                    <img src="{{ item.image_url }}" alt="{{ item.name }} - Image" class="w-1/2 h-32 rounded-lg mb-4">
+                    <div class="text-center">
+                        <div class="mb-2 flex justify-evenly">
+                            <p class="text-gray-600">Name:
+                                <strong class="text-xl font-semibold">{{ item.name }}</strong><br>
+                            </p>
+                            <p class="text-gray-600">Price:
+                                <span class="text-gray-600"> ${{ item.price }}</span><br>
+                            </p>
+                        </div>
+                        <p class="text-gray-600">Description:
+                            <span class="text-gray-500 text-sm"> {{ item.description }}</span>
+                        </p>
+                    </div>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-center text-gray-600">No items available.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
