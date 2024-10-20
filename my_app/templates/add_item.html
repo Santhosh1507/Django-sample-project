@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Add Item</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto px-4 py-8">
         <h2 class="text-3xl font-bold mb-6 text-center">Add New Item</h2>
@@ -16,9 +18,17 @@
                 <div class="space-y-4">
                     {{ form.as_p|safe }}
                 </div>
-                <button type="submit" class="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200">Add Item</button>
+                <div class="flex gap-2">
+                    <button type="submit"
+                        class="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200">Add
+                        Item</button>
+                    <button
+                        class="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"><a
+                            href="/item-list">Item List</a></button>
+                </div>
             </form>
         </div>
     </div>
 </body>
+
 </html>

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,7 +80,7 @@ WSGI_APPLICATION = "my_app_project.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
+        'ENGINE': 'django',
         'NAME': 'Django_project',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
@@ -88,6 +88,8 @@ DATABASES = {
         }
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgresql://django_project_i4fp_user:pUb8AOwJqCbATRynPKZoGVfWJC1U3S0s@dpg-csab0808fa8c73cm5mh0-a.singapore-postgres.render.com/django_project_i4fp")
 
 
 # Password validation
