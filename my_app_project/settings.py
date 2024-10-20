@@ -73,23 +73,19 @@ WSGI_APPLICATION = "my_app_project.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-# "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
+"default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django',
-        'NAME': 'Django_project',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'mongodb+srv://firefriends15072002:qwertyuiop@cluster0.omgqv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
-        }
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgresql://django_projects_jspt_user:dQeWo07lw3cy9JKgUeq6x9dj03N6Zmrm@dpg-csad74aj1k6c73coa93g-a/django_projects_jspt")
+DATABASES["default"] = dj_database_url.parse("postgresql://django_project_i4fp_user:pUb8AOwJqCbATRynPKZoGVfWJC1U3S0s@dpg-csab0808fa8c73cm5mh0-a.singapore-postgres.render.com/django_project_i4fp")
 
 
 # Password validation
