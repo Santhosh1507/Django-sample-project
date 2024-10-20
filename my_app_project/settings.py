@@ -85,7 +85,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgresql://django_project_i4fp_user:pUb8AOwJqCbATRynPKZoGVfWJC1U3S0s@dpg-csab0808fa8c73cm5mh0-a.singapore-postgres.render.com/django_project_i4fp")
+DATABASES["default"] = dj_database_url.parse("postgresql://django_projects_jspt_user:dQeWo07lw3cy9JKgUeq6x9dj03N6Zmrm@dpg-csad74aj1k6c73coa93g-a/django_projects_jspt")
 
 
 # Password validation
